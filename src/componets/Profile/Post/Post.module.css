@@ -1,0 +1,13 @@
+.item {
+    color: red
+}
+
+.item.active {
+    color: rgba(0, 255, 119, 0.756)
+}
+
+.item img {
+    width: 40px;
+    height: 50px;
+    border-radius: 40px;
+}
