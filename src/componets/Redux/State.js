@@ -36,4 +36,15 @@ let State = {
 
 
 }
+export let addPost=(postMessage)=>{
+    let newPost={
+        id:4,
+        message:postMessage,
+        likeKaunas:0,
+        DisLikeKaunas:0
+    }
+
+    State.ProfilePage.PostData.push(newPost)
+
+}
 export default State
