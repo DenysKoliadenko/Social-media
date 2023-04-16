@@ -6,6 +6,8 @@ let State = {
             { id: 2, message: 'Salle 20% ', likeKaunas: '10', DisLikeKaunas: '0' },
             { id: 3, message: 'NEW YEAR SALLE ', likeKaunas: '50', DisLikeKaunas: '1' },
         ],
+        newPostText: "Skoda post"
+        
     },
     DialogsPage: {
         DialogsData: [
@@ -36,16 +38,26 @@ let State = {
 
 
 }
-export let addPost=(postMessage)=>{
-    let newPost={
-        id:4,
-        message:postMessage,
-        likeKaunas:0,
-        DisLikeKaunas:0
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 4,
+        message: postMessage,
+        likeKaunas: 0,
+        DisLikeKaunas: 0
     }
 
     State.ProfilePage.PostData.push(newPost)
     rerenderEntireThree(State)
 
 }
+export let updateNewPostText = (NewText) => {
+    State.ProfilePage.newPostText = NewText;
+    rerenderEntireThree(State)
+
+}
+
+
+
+
+
 export default State

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { addPost } from './componets/Redux/State';
+import { addPost,updateNewPostText } from './componets/Redux/State';
 import { BrowserRouter, } from 'react-router-dom'
+ 
 
 export let rerenderEntireThree = (State) => {
     const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +12,7 @@ export let rerenderEntireThree = (State) => {
     root.render(
         <BrowserRouter>
             <React.StrictMode>
-                <App State={State} addPost={addPost} />
+                <App State={State} addPost={addPost} updateNewPostText={updateNewPostText} />
             </React.StrictMode>
         </BrowserRouter>
 

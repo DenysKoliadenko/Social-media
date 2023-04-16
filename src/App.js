@@ -13,6 +13,7 @@ import { Routes, Route } from 'react-router-dom'
 
 
 const App = (props) => {
+  
 
   return (
 
@@ -27,7 +28,10 @@ const App = (props) => {
         <Routes>
 
           <Route path='/dialogs/*' element={<Dialogs State={props.State.DialogsPage} />} />
-          <Route path='/profile' element={<Profile State={props.State.ProfilePage} addPost={props.addPost} />} />
+          <Route path='/profile' element={<Profile
+            ProfilePage={props.State.ProfilePage}
+            addPost={props.addPost}
+            updateNewPostText={props.updateNewPostText} />} />
           <Route path='/news' element={<News />} />
           <Route path='/music' element={<Music />} />
           <Route path='/setings' element={<Setings />} />
