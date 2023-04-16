@@ -8,12 +8,12 @@ const MyPosts = (props) => {
 
     let PostElements = props.State.PostData.map(p => < Post message={p.message} likeKaunas={p.likeKaunas} DisLikeKaunas={p.DisLikeKaunas} />)
     let newPostElement = React.createRef()
-    let addPost = (props) => {
+    let addPost = () => {
         let text = newPostElement.current.value;
         props.addPost(text)
         
     }
-    let onPostChange = (props) => {
+    let onPostChange = () => {
         
         let text = newPostElement.current.value;
         props.updateNewPostText(text)
