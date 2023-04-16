@@ -1,4 +1,4 @@
-
+import { rerenderEntireThree } from "../../render"
 let State = {
     ProfilePage: {
         PostData: [
@@ -45,6 +45,7 @@ export let addPost=(postMessage)=>{
     }
 
     State.ProfilePage.PostData.push(newPost)
+    rerenderEntireThree(State)
 
 }
 export default State
